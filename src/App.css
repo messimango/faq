@@ -43,6 +43,10 @@ body {
   font-family: 'Poppins';
   background-color: #282c34;
   color: goldenrod;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .closed {
@@ -57,4 +61,32 @@ body {
   border: none;
   color: lightcoral;
   cursor: pointer;
+  font-size: 30px;
+}
+
+.questbox p{
+  background-color: grey;
+  width: 75%;
+  border-radius: 25px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.questbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid goldenrod;
+  border-radius: 25px;
+  padding: 10px;
+  width: 80%;
+  margin: 15px;
+}
+
+.questions {  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

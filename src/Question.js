@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BsArrowBarUp, BsCaretDownFill } from "react-icons/bs";
+import { BsFillCaretUpFill, BsCaretDownFill } from "react-icons/bs";
 
 
 const Questbox = ({question,answer}) => {
@@ -8,7 +8,7 @@ const Questbox = ({question,answer}) => {
     return <div className='questbox'>
         <div className='closed'>
             <h2>{question}</h2>
-            <button className='expandbutton' onClick={()=> setShowAnswer(!showAnswer)}>{showAnswer? <BsArrowBarUp/> : <BsCaretDownFill/> }</button>
+            <button className='expandbutton' onClick={()=> setShowAnswer(!showAnswer)}>{showAnswer? <BsFillCaretUpFill/> : <BsCaretDownFill/> }</button>
         </div>
         {showAnswer && <p>{answer}</p>}
     </div>;
