@@ -1,25 +1,20 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
+import quests from './questions.js';
+import Questbox from './Question.js'
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [questions, setQuestions] = useState(quests);
+  return <div className="App">
+      <div className='question-area'>
+        <h3>F.A.Q</h3>
+      </div>
+      <div className='questions'>
+        {questions.map((question) => { return <Questbox key={question.id} {... question} />;
+        })
+        }
+      </div>
+    </div>;
 }
 
 export default App;
